@@ -1,0 +1,41 @@
+{
+  underlying: '0xb8aE9BfE223Bf475957Cc66941Cb9C5347232568',
+  comptroller: '0xDb1f89399E5DdE0C11e1482024807aEAb9ae2415',
+  interestRateModel: '0x03FFdDEB11183A99aac7171dA2D987b7AD36625c',
+  initialExchangeRateMantissa: '200000000000000000000000000',
+  name: 'Compound Uniswap',
+  symbol: 'cUNI',
+  decimals: 8,
+  admin: '0x2b6e4066f435C758708C406f8E9c18E26DF649D4',
+  implementation: '0x36Aa1F4AFAeB88dB83F32cC335661428926e38cD'
+}
+{
+  underlying: '0xa2398A628D401cf3922Fb7e1222B7c966B3D3D4b',
+  comptroller: '0xDb1f89399E5DdE0C11e1482024807aEAb9ae2415',
+  interestRateModel: '0x85409658Bb0a70b77325D1046b3A8A1363a4f0e0',
+  initialExchangeRateMantissa: '200000000000000',
+  name: 'Compound USD Coin',
+  symbol: 'cUSDC',
+  decimals: 8,
+  admin: '0x2b6e4066f435C758708C406f8E9c18E26DF649D4'
+}
+Comptroller:  0xDb1f89399E5DdE0C11e1482024807aEAb9ae2415
+SimplePriceOralce:  0xf6543272535d2a58D48D44B251e21683A7d99401
+cUNI:  0xcFfd4a4Cd3e97a3910933973Ab7fB967F47261EB
+cUSDC:  0xD2B747531983A6B3a951063FFD5D7E4c98C280DB
+Compound deployed to: 0x825cD5F4696FF3fB805183911f6CABD819a19fec
+
+
+0x2b6e4066f435C758708C406f8E9c18E26DF649D4
+
+0xf27C12FC24694DEA2ba68eD01c118Bca5d74eB83
+0x5B0C5a537b2Ae7F8F50D7f97A7F096ff459F8a7D
+0xbC6D05Aea0B8220ffD213c1349adEF5b029f133b
+0x335839ce80f908290A8eE7759f2f80B54b7680Fe
+
+npx hardhat run --network mumbai ./scripts/sample.ts
+npx hardhat verify --network mumbai --contract contracts/compound/CErc20Immutable.sol:CErc20Immutable 0x0Dd4E7dD678357b10B36492941390eE555d18280  --constructor-args .\scripts\compoundParam.js
+
+
+500000000000000000000
+10000000000000000000

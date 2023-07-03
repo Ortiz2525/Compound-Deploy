@@ -32,6 +32,16 @@ const config: HardhatUserConfig = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+
+    mumbai: {
+      url: `https://rpc-mumbai.maticvigil.com`,
+      accounts: 
+      process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      chainId: 80001,
+      gas: 3000000,
+      gasPrice: 15000000000,
+      //blockGasLimit: 5000000,
+    },
   },
   typechain: {
     outDir: "typechain",
@@ -42,7 +52,7 @@ const config: HardhatUserConfig = {
     currency: "USD",
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: process.env.ETHERSCAN_API_KEY ,
   },
   solidity: {
     compilers: [
@@ -57,6 +67,15 @@ const config: HardhatUserConfig = {
       },
       {
         version: "0.5.16",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
+        version: "0.7.6",
         settings: {
           optimizer: {
             enabled: true,

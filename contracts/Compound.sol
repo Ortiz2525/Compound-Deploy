@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.5.16;
 
-import "@thenextblock/hardhat-compound/dist/contracts/compound/CTokenInterfaces.sol";
+import "./compound/CTokenInterfaces.sol";
 
 import "./IComptroller.sol";
 

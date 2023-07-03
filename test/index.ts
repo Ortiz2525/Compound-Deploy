@@ -154,6 +154,8 @@ describe("Compound contract", function () {
 
     const userCcUniBalance = await cUNI.balanceOf(userC.address);
     console.log("userC cUNI Balabce : ", userCcUniBalance.toString());
+    const userCcUniBalance1 = await cUNI.balanceOf(userA.address);
+    console.log("userA cUNI Balabce : ", userCcUniBalance1.toString());
 
     await cUNI.connect(userC).redeem(userCcUniBalance.toString());
     // const userUNIBalance = await UNI.balanceOf(userC.address);
